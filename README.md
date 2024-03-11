@@ -45,8 +45,8 @@ npm run build
 npm run lint
 ```
 
-### For my love to this game
+### For my love for this game
 
-Very simple site made with Vue.js and Typescript to just take a look how those too work togather, it was a nice practice 😁
+Straightforward site made with Vue.js and Typescript to take a look at how those two work together, it was a nice practice 😁
 
 ### Screenshot from the site
