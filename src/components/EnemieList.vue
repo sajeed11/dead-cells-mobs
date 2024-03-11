@@ -28,7 +28,7 @@ const orderedEnemies = computed(() => {
 <template>
   <div class="enemie-list">
     <p>Order by {{ order }}</p>
-    <ul>
+    <transition-group name="mobsList" tag="ul">
       <li v-for="enemie in orderedEnemies" :key="enemie.id">
         <h2>{{ enemie.title }}</h2>
         <div class="feature">
@@ -45,7 +45,7 @@ const orderedEnemies = computed(() => {
           <p>{{ enemie.behavior }}</p>
         </div>
       </li>
-    </ul>
+    </transition-group>
   </div>
 </template>
 
@@ -104,5 +104,8 @@ const orderedEnemies = computed(() => {
 .descrip {
   color: #3c2a21;
   font-weight: 500;
+}
+.mobsList-move {
+  transition: all 0.5s;
 }
 </style>
