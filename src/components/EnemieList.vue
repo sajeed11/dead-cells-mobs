@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { PropType } from 'vue'
+import { computed, type PropType } from 'vue'
 import type { Enemie } from '@/types/Enemie'
 import type { OrderTerm } from '@/types/OrderTerm'
 
-defineProps({
+const props = defineProps({
   enemies: {
     required: true,
     type: Array as PropType<Enemie[]>
@@ -17,13 +17,19 @@ defineProps({
 const imageUrl = (fileName: string) => {
   return new URL(`../assets/mobs/${fileName}.png`, import.meta.url).href
 }
+
+const orderedEnemies = computed(() => {
+  return [...props.enemies].sort((a: Enemie, b: Enemie) => {
+    return a[props.order] > b[props.order] ? 1 : -1
+  })
+})
 </script>
 
 <template>
   <div class="enemie-list">
     <p>Order by {{ order }}</p>
     <ul>
-      <li v-for="enemie in enemies" :key="enemie.id">
+      <li v-for="enemie in orderedEnemies" :key="enemie.id">
         <h2>{{ enemie.title }}</h2>
         <div class="feature">
           <div class="info">
