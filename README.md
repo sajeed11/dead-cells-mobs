@@ -50,4 +50,7 @@ npm run lint
 Straightforward site made with Vue.js and Typescript to take a look at how those two work together, it was a nice practice 😁
 
 ### Screenshot from the site
-![Landing page](src/assets/screenshots/Screenshot 2024-03-11 144900.png)
+
+![Landing page](src/assets/screenshots/Screenshot%202024-03-11%20144900.png)
+
+![Other one](src/assets/screenshots/Screenshot%202024-03-11%20150354.png)
