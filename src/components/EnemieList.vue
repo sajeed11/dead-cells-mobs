@@ -67,6 +67,7 @@ const orderedEnemies = computed(() => {
 .enemie-list h2 {
   margin: 0 0 10px;
   text-transform: capitalize;
+  font-family: HyliaSerif;
 }
 .feature {
   display: flex;
